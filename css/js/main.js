@@ -1,0 +1,412 @@
+var l_h ,w_h;
+var vindm = {
+	
+	/*--- Работы --------------------------------------------------------------------------------------*/
+	works:{
+		arr:{},
+		/*--- Получаем данные из БД -----------------------------------------------------------------------------------------*/
+		getFromDb : function() {
+			$.ajax({
+				type: 'POST',
+				url: 'php/bdfuncs.php',
+				data: 'task=getProjects',
+				dataType: 'json',
+				success: function(data) {
+					vindm.works.arr=data;			
+					$('#wrapper').addClass('alone');
+					$('#left').append( vindm.works.make.menu(data) );
+					$('#right').append( vindm.works.make.list(data) );					
+					l_h = $('#left').height();
+					buildScrollableItems();			
+					vindm.works.trans.car();
+				}
+			});
+		},
+		trans: {
+			lshow: function() {
+				var speed = 700;
+				$('#left').show().animate({
+					left: 0
+				}, speed);
+				$('#arrows').removeClass('list').addClass('car').show().animate({
+					left: 212,
+					top: '50%',
+					marginTop:34
+				}, speed, function(){
+				});
+				$('#right').animate({
+					left: 244,
+					right:0
+				}, speed);
+				$('#menu_projects li').bind('click', function() {
+					ind= $(this).index();
+					if(ind!==$('.project.active').index()) {
+						$('.menu_project').removeClass('active');
+						$(this).addClass('active');
+						itemScrollMenu(ind);
+					}
+				});
+				$('#arrows .icon').bind('click', function() {
+					var delta = $(this).hasClass('arrow_up')? -1: 1; 
+					$.when($('#list_projects').find('.project')).done(function(){
+						itemScroll(delta);
+					});
+				});
+				$('#list_projects').bind('mousewheel', function(event, delta) {
+					if(delta<0) {
+						 
+						$('.arrow_down').addClass('scr');
+						setTimeout(function() {
+							$('.arrow_down').removeClass('scr');
+						}, '200');
+					} else {
+						 
+						$('.arrow_up').addClass('scr');
+						setTimeout(function() {
+							$('.arrow_up').removeClass('scr');
+						}, '200');
+					}
+					$.when($('#list_projects').find('.project')).done(function(){
+						itemScroll(-delta);
+					});
+				});
+				
+			},
+			lhide: function() {
+				var speed = 700;
+				$('#left').animate({
+					left: -$('#left').width()
+				}, speed, function(){
+					$(this).hide();
+				});
+				$('#right').animate({
+					left: 52,
+					 right:10
+				}, speed);
+				$('#arrows').animate({
+					left: 10
+				}, speed, function() {
+					$(this).fadeOut(function(){$(this).addClass('list');});
+				})
+				$(window).bind('scroll', function() {
+					if(this.pageYOffset>w_h) {
+						$('#arrows').fadeIn().bind('click', function() {
+							var sp = ($(document).height()/w_h)*500;
+							$('body, html').stop().animate({
+								scrollTop:0
+							}, sp, 'jswing')
+						});
+					} else {
+						$('#arrows').fadeOut().unbind('click');
+					}					
+				})
+				$('#menu_projects li, #arrows .icon').unbind('click');
+				$('#list_projects').unbind('mousewheel');
+			},
+			
+			car: function() {
+				$('#loader').hide();	
+				$('#right').removeClass().addClass('car');						
+				
+				
+					
+					$('#list_view, #alone_view').removeClass('act');
+					$('#alone_view').addClass('act');
+					vindm.works.trans.lshow();
+					$.when( $('#left, #right') ).done(function(){				
+						$('#right img').each(function(i,v) {
+							imgResize.apply( $(v), ['anim'] );					
+
+						});
+						if($('.project.active').length==0){
+					$('#list_projects .project:eq(0)').addClass('active').animate({
+						top:0,
+						opacity:1
+					});
+				}
+					});
+				
+				
+				$(document).bind('keydown', function(e){
+					if(e.keyCode==38) {
+						itemScroll(1)
+					} else if(e.keyCode==40){
+						itemScroll(-1);
+					}
+				})
+				$(window).bind('resize', windowResize);
+						
+			},
+			list: function() {
+				if($('.project.active').index('.project')!==0) {
+					$('.project').stop();
+					itemScroll(-1, 0)};
+				$.when($('#list_projects .project:eq(0)')).done(function(){
+					$('#list_view, #alone_view').removeClass('act');
+					$('#list_view').addClass('act');
+					vindm.works.trans.lhide();
+					
+					$.when( $('#left, .project') ).done(function(){
+						
+						$('#right')
+							.removeClass()
+							.addClass('list')
+							.find('img')
+								.height('auto')
+								.animate({
+									width:650
+								}, 700, function(){
+									$(document).unbind('keydown');
+									
+								});
+						
+					});
+				});
+
+			}
+		},
+
+		make : {	
+				
+			/*--- Создаем список работ -----------------------------------------------------------------------------------------*/
+			list: function () {
+				var list = $('<ul id="list_projects">');
+				
+				$.each(vindm.works.arr, function(i, val) {			
+					var li = $('<li id="proj_'+val.screen+'" class="project table">');
+						var section = $('<div class="main pic cell dark">');
+							var img = $('<img src="images/'+val.screen+'.jpg" class="" >');
+						var aside = $('<div class="sidebar project_description cell dark">');
+							var title = $('<h2 class="title">').text(val.name);
+							var comp = $('<p class="aboutCompany">').text(val.company);
+							var metaul = $('<ul class="metadata">');
+								var dhr= $('<hr class="dhr">');
+								var lhr= $('<hr class="lhr">');	
+								var descr = $('<li>').append($('<h3>').text('Описание')).append($('<p class="description">').text(val.descr))//.append($('<hr class="dhr">'), $('<hr class="lhr">'));							
+								var roles = $('<li>').append($('<h3>').text('Обязанности')).append($('<p>').text(val.roles))//.append($('<hr class="dhr">'), $('<hr class="lhr">'));
+								var year = $('<li>').append($('<h3>').text('Год выпуска')).append($('<p>').text(val.year))//.append($('<hr class="dhr">'), $('<hr class="lhr">'));
+								var href = $('<li>')
+													.append($('<h3>').text('Адрес сайта'))
+													.append( $('<p>').append( $('<a>').text(val.href).attr('href', 'http://www.'+val.href) ) )
+													//.append($('<hr class="dhr">'), $('<hr class="lhr">'));
+														
+					li.append(section).append(aside);
+						section.append(img);
+						aside.append(title, comp, metaul);
+							metaul.append(descr, roles, year, href);	
+																
+					list.append(li);
+				})
+				
+				return(list);
+			},
+			
+			/*---- Создаем меню для слайдера ---------------------------------------------------------------------------------------------------------*/
+			menu: function () {
+				var cont = $('<div id="thumbScroller">');
+				var list = $('<ul id="menu_projects" class="container">');
+				
+				$.each(vindm.works.arr, function(i, val) {			
+					var li = $('<li item="'+val.screen+'" class="menu_project content light">');
+						var section = $('<section class="main pic ">');
+							var img = $('<img src="images/'+val.screen+'.jpg" class="thumb">');
+						var aside = $('<aside class="sidebar project_description cell">');
+							var title = $('<h2 class="title">').text(val.name);
+							var descr = $('<p class="description">').text(val.descr);
+															
+					li.append(section);
+						section.append(img);
+						aside.append(title, descr);															
+					list.append(li);
+				})
+				
+				return(cont.append(list).append($('<div id="overlay">')));
+			},
+			
+		}
+	}		
+}
+
+
+function imgResize(how) {
+	var elem = $(this);
+	how=='anim'? '':elem.removeAttr("width").removeAttr("height").css({ width: "", height: "" });
+	var wrap = elem.parents('#list_projects');
+	var imageWidth = elem.width();
+	var imageHeight = elem.height();
+	wrapWidth = wrap.width()*3/5-40;
+	var wrapHeight = l_h;
+	
+	if(imageHeight!==wrapHeight) {
+	  imageWidth = (imageWidth/imageHeight)*wrapHeight;
+	  imageHeight = wrapHeight;	
+	  if(imageWidth > wrapWidth) {			
+		  imageHeight = (imageHeight/imageWidth)*wrapWidth;
+		  imageWidth = (wrapWidth);
+		}
+		
+	} else if (imageWidth > wrapWidth) {
+
+		imageHeight = (imageHeight/imageWidth)*wrapWidth;
+		imageWidth = (wrapWidth);
+	}
+	
+	if(how=='anim') {
+		elem.animate({
+			width:Math.round(imageWidth),
+			height: 'auto'
+		}, 1000);
+	} else {
+		elem.css({
+			width:Math.round(imageWidth),
+			height: 'auto'
+		});
+	}
+	
+}
+
+function itemScroll(delta, index) {	
+	var items = $('#list_projects').find('.project');
+	delta = delta>0? 1: -1;
+	var index = index + 0;
+	if ( items.filter(':animated').size() <= 0  ) {
+		var act = $('.project.active');
+		var cnt = items.size();
+		var ind = act.index();
+		var dist = act.height()+52
+		var speed = 1500;
+		var easeType = 'jswing';
+		$('#right .project:not(.active)').css('top', dist);
+		if (index!==0) {
+			if (ind == 0) {
+				next = delta < 0? items.eq(cnt-1): items.eq(ind+delta);
+			} else if( ind==cnt-1 ) {
+				next = delta > 0? items.eq(0): items.eq(ind+delta);
+			} else {
+				next = items.eq(ind+delta);
+			}
+		} else {
+			next = items.eq(index);
+		}
+		
+		to = ( 0 - dist ) * delta;
+		act.animate({
+			top: to,
+			opacity:0.5
+		}, speed, easeType, function() {
+			$(this).removeClass('active');
+		});
+		
+		next
+			.css({
+				top: dist * delta,
+				left:0,
+				opacity:0.0
+			})
+			.addClass('active')
+			.animate({
+				top: 0,
+				opacity:1
+			}, speed, easeType, function(){
+				$(this).fadeIn(1)
+			});
+	} else {		
+	}
+}
+
+function itemScrollMenu(item){
+	if ( $('.project').filter(':animated').size() <= 0  ) {
+		var dist = $('#right').width();
+		var act = $('.project.active');
+		var next = $('.project').eq(item);
+		var delta = act.index() - item > 0? 1: -1;
+		var speed = 1500;
+		var easeType = 'jswing';
+		to = ( 0 - dist ) * delta;
+		act.animate({
+			left: to,
+			opacity:0
+		}, speed, easeType, function() {
+			$(this).removeClass('active');
+		});
+		
+		next.css({
+			'left': dist * delta,
+			'top' : 0,
+			opacity:0
+		})
+		.addClass('active')
+		.animate({
+			left: 0,
+		 	opacity:1
+		}, speed, easeType, function(){
+			$(this).fadeIn(1)
+		});
+		
+	}
+	
+}
+function buildScrollableItems(){
+	var $thumbScroller		= $('#thumbScroller');
+	var $scrollerContainer	= $thumbScroller.find('.container');
+	var $scrollerContent	= $thumbScroller.find('.content');
+	var itemHeight = 132;
+	var totalContent = (vindm.works.arr.length-1)*(itemHeight+10);	
+	var fadeSpeed			= 400;
+	var animSpeed			= 600;
+	var easeType			= 'easeOutCirc';
+	$thumbScroller.mousemove(function(e){
+		if($scrollerContainer.height()> $thumbScroller.height()){
+			var mouseCoords		= (e.pageY - 147);
+			var mousePercentY	= mouseCoords/$thumbScroller.height();
+			var destY			= -(((totalContent-($thumbScroller.height()-itemHeight))-$thumbScroller.height())*(mousePercentY));
+			var thePosA			= Math.round(mouseCoords-destY);
+			var thePosB			= Math.round(destY-mouseCoords);
+			if(mouseCoords==destY) {
+				$scrollerContainer.stop();
+			} else if(mouseCoords>destY) {
+				$scrollerContainer.stop()
+				.animate({
+					top: -thePosA
+				},	animSpeed, easeType);
+			} else if(mouseCoords<destY) {
+				$scrollerContainer.stop()
+				.animate({
+					top: thePosB
+				},	animSpeed, easeType);
+			}
+		}
+	})
+	.find('.thumb')
+		.fadeTo(fadeSpeed, 0.6)
+		.hover(
+			function(){ //mouse over
+				$(this).fadeTo(fadeSpeed, 1);
+			},
+			function(){ //mouse out
+				$(this).fadeTo(fadeSpeed, 0.6);
+			}
+		);
+}function windowResize() {
+	w_h = $(window).height();
+	l_h = $('#left').height();		
+	$('#right.car img').each(imgResize);		
+}
+$(function(){
+	l_h = $('#left').height();
+	w_h=$(window).height();
+	vindm.works.getFromDb();
+	$('#right img').livequery(imgResize);
+	$('#list_view').bind('click', function() {
+		if($(this).hasClass('act')) {} else {
+			vindm.works.trans.list();
+		}
+	});
+	$('#alone_view').bind('click', function() {
+		if($(this).hasClass('act')) {} else {
+			vindm.works.trans.car();
+		}
+	});
+	
+	
+})
