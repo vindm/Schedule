@@ -1497,10 +1497,12 @@ $(function() {
     auth_key = flashVars['auth_key'];
     viewer_id = flashVars['viewer_id'];
 console.log(viewer_id)
+
     if ( !viewer_id ) {
         $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
-        check_gr('371', dateText);
+        //check_gr('371', dateText);
     }
+
     VK.init(function() {
         VK.callMethod('scrollWindow', 68)
         VK.api("getGroups", function(data) {
@@ -1535,6 +1537,7 @@ console.log(viewer_id)
     $("#tabs")
         .tabs({ fx: { opacity: 'toggle' }})
         .slideDown();
+
     $('#add_mes').bind('click',	mes_btn)
     $('#next_mes').addClass('dis').bind('click', next_mes_func)
     $('#prev_mes').bind('click', prev_mes_func)
