@@ -1502,7 +1502,7 @@ $(function() {
         }
         auth_key = flashVars['auth_key'];
         viewer_id = flashVars['viewer_id'];
-        console.log(VK.api)
+        console.log(VK)
         VK.api("getGroups", function(data) {
             for(var i=0; i<=data.response.length;i++) {
                 switch(data.response[i]) {
