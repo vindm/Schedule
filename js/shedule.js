@@ -1500,7 +1500,7 @@ $(function() {
 
 
     VK.init(function() {
-        $("#gr_tog label.ui-state-active").removeClass('ui-state-active');
+        $("#gr_tog label").removeClass('ui-state-active').attr("aria-pressed", false);
         if ( !viewer_id ) {
             $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
             $('#group').removeClass().addClass('371')
@@ -1508,28 +1508,33 @@ $(function() {
         }
         VK.callMethod('scrollWindow', 68)
         VK.api("getGroups", function(data) {
-            console.log('lol')
+            $("#gr_tog label").removeClass('ui-state-active').attr("aria-pressed", false);
             for(var i=0; i<=data.response.length;i++) {
                 switch(data.response[i]) {
                     case 482775:
                         $("#gr_tog>label").eq(0).removeClass().addClass("ui-state-active").attr("aria-pressed", true);
+                        $('#group').removeClass().addClass('371')
                         check_gr('371', dateText);
                         break;
                     case 300255:
                     case 15895805:
                         $("#gr_tog>label").eq(1).addClass("ui-state-active").attr("aria-pressed", true);
+                        $('#group').removeClass().addClass('372')
                         check_gr('372', dateText);
                         break;
                     case 929251:
                         $("#gr_tog>label").eq(2).addClass("ui-state-active").attr("aria-pressed", true);
+                        $('#group').removeClass().addClass('373')
                         check_gr('373', dateText);
                         break;
                     case 292588:
                         $("#gr_tog>label").eq(3).addClass("ui-state-active").attr("aria-pressed", true);
+                        $('#group').removeClass().addClass('3571')
                         check_gr('3571', dateText);
                         break;
                     default:
                         $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
+                        $('#group').removeClass().addClass('371')
                         check_gr('371', dateText);
                 }
             }
