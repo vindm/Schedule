@@ -1503,7 +1503,6 @@ $(function() {
 
         if ( !viewer_id ) {
             $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
-            $('#group').removeClass().addClass('371')
             check_gr('371', dateText);
         }
         VK.callMethod('scrollWindow', 68)
@@ -1513,28 +1512,24 @@ $(function() {
                 switch(data.response[i]) {
                     case 482775:
                         $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
-                        $('#group').removeClass().addClass('371')
+
                         check_gr('371', dateText);
                         break;
                     case 300255:
                     case 15895805:
                         $("#gr_tog>label").eq(1).addClass("ui-state-active").attr("aria-pressed", true);
-                        $('#group').removeClass().addClass('372')
                         check_gr('372', dateText);
                         break;
                     case 929251:
                         $("#gr_tog>label").eq(2).addClass("ui-state-active").attr("aria-pressed", true);
-                        $('#group').removeClass().addClass('373')
                         check_gr('373', dateText);
                         break;
                     case 292588:
                         $("#gr_tog>label").eq(3).addClass("ui-state-active").attr("aria-pressed", true);
-                        $('#group').removeClass().addClass('3571')
                         check_gr('3571', dateText);
                         break;
                     default:
                         $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
-                        $('#group').removeClass().addClass('371')
                         check_gr('371', dateText);
                 }
             }

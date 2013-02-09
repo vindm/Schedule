@@ -57,7 +57,7 @@
       <file leaf-file-name="shedule.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/shedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1514" column="48" selection-start="64052" selection-end="64052" vertical-scroll-proportion="0.44915253">
+            <state line="1504" column="92" selection-start="63590" selection-end="63590" vertical-scroll-proportion="0.3644068">
               <folding>
                 <element signature="n#!!block;n#firweek#0" expanded="false" />
                 <element signature="n#!!block;n#secweek#0" expanded="false" />
@@ -501,7 +501,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/shedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1514" column="48" selection-start="64052" selection-end="64052" vertical-scroll-proportion="0.44915253">
+        <state line="1504" column="92" selection-start="63590" selection-end="63590" vertical-scroll-proportion="0.3644068">
           <folding>
             <element signature="n#!!block;n#firweek#0" expanded="false" />
             <element signature="n#!!block;n#secweek#0" expanded="false" />
