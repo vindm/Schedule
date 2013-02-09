@@ -1505,31 +1505,26 @@ $(function() {
         VK.callMethod('scrollWindow', 68)
         VK.api("getGroups", function(data) {
             $("#gr_tog label").removeClass('ui-state-active').attr("aria-pressed", false);
+            var gr = 0;
             for(var i=0; i<=data.response.length;i++) {
                 switch(data.response[i]) {
                     case 482775:
-                        $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
-console.log('371')
-                        check_gr('371', dateText);
-                        break;
+                        gr=0; break;
                     case 300255:
                     case 15895805:
-                        $("#gr_tog>label").eq(1).addClass("ui-state-active").attr("aria-pressed", true);
-                        check_gr('372', dateText);console.log('372')
-                        break;
+                        gr = 1; break;
                     case 929251:
-                        $("#gr_tog>label").eq(2).addClass("ui-state-active").attr("aria-pressed", true);
-                        check_gr('373', dateText);console.log('373')
-                        break;
+                        gr=2; break;
                     case 292588:
-                        $("#gr_tog>label").eq(3).addClass("ui-state-active").attr("aria-pressed", true);
-                        check_gr('3571', dateText);console.log('3571')
-                        break;
+                        gr=3; break;
                     default:
-                        $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
-                        check_gr('371', dateText);console.log('371')
+                        gr=0
                 }
             }
+            $("#gr_tog>label").eq(gr).addClass("ui-state-active").attr("aria-pressed", true);
+            check_gr(groups[gr], dateText);
+            console.log(groups[gr])
+
             //base(viewer_id, auth_key)
         })
     });
