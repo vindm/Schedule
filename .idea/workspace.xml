@@ -23,7 +23,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="61" selection-start="432" selection-end="432" vertical-scroll-proportion="-6.25">
+            <state line="9" column="18" selection-start="358" selection-end="358" vertical-scroll-proportion="-5.625">
               <folding>
                 <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -57,7 +57,7 @@
       <file leaf-file-name="shedule.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/shedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1433" column="7" selection-start="61583" selection-end="61583" vertical-scroll-proportion="0.9364407">
+            <state line="1510" column="50" selection-start="64077" selection-end="64077" vertical-scroll-proportion="0.27966103">
               <folding>
                 <element signature="n#!!block;n#base#0" expanded="false" />
                 <element signature="n#!!block;n#statis#0" expanded="false" />
@@ -79,11 +79,11 @@
                 <element signature="n#!!block;n#rr#0" expanded="false" />
                 <element signature="n#!!block;n#next_mes_func#0" expanded="false" />
                 <element signature="n#!!block;n#prev_mes_func#0" expanded="false" />
-                <element signature="e#60494#60711#0" expanded="false" />
-                <element signature="e#60846#61130#0" expanded="false" />
-                <element signature="e#61219#61486#0" expanded="false" />
-                <element signature="e#63188#63315#0" expanded="false" />
-                <element signature="e#63351#63479#0" expanded="false" />
+                <element signature="e#59649#59866#0" expanded="false" />
+                <element signature="e#60001#60285#0" expanded="false" />
+                <element signature="e#60374#60641#0" expanded="false" />
+                <element signature="e#62343#62470#0" expanded="false" />
+                <element signature="e#62506#62634#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -92,11 +92,11 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.38135594">
+            <state line="63" column="13" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1235#1291#0" expanded="false" />
-                <element signature="e#1300#1337#0" expanded="false" />
-                <element signature="e#1346#1387#0" expanded="false" />
+                <element signature="e#1313#1369#0" expanded="false" />
+                <element signature="e#1378#1415#0" expanded="false" />
+                <element signature="e#1424#1465#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -464,9 +464,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="13" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1313#1369#0" expanded="false" />
+            <element signature="e#1378#1415#0" expanded="false" />
+            <element signature="e#1424#1465#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="61" selection-start="432" selection-end="432" vertical-scroll-proportion="-6.25">
+        <state line="9" column="18" selection-start="358" selection-end="358" vertical-scroll-proportion="-5.625">
           <folding>
             <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -496,20 +507,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.38135594">
-          <folding>
-            <element signature="e#1235#1291#0" expanded="false" />
-            <element signature="e#1300#1337#0" expanded="false" />
-            <element signature="e#1346#1387#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/shedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1433" column="7" selection-start="61583" selection-end="61583" vertical-scroll-proportion="0.9364407">
+        <state line="1510" column="50" selection-start="64077" selection-end="64077" vertical-scroll-proportion="0.27966103">
           <folding>
             <element signature="n#!!block;n#base#0" expanded="false" />
             <element signature="n#!!block;n#statis#0" expanded="false" />
@@ -531,11 +531,11 @@
             <element signature="n#!!block;n#rr#0" expanded="false" />
             <element signature="n#!!block;n#next_mes_func#0" expanded="false" />
             <element signature="n#!!block;n#prev_mes_func#0" expanded="false" />
-            <element signature="e#60494#60711#0" expanded="false" />
-            <element signature="e#60846#61130#0" expanded="false" />
-            <element signature="e#61219#61486#0" expanded="false" />
-            <element signature="e#63188#63315#0" expanded="false" />
-            <element signature="e#63351#63479#0" expanded="false" />
+            <element signature="e#59649#59866#0" expanded="false" />
+            <element signature="e#60001#60285#0" expanded="false" />
+            <element signature="e#60374#60641#0" expanded="false" />
+            <element signature="e#62343#62470#0" expanded="false" />
+            <element signature="e#62506#62634#0" expanded="false" />
           </folding>
         </state>
       </provider>

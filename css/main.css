@@ -1,7 +1,7 @@
 @media screen and ( min-width: 830px ) {
     #all{
         left: 0;
-        right: 280px;
+        right: 260px;
         position: absolute;
     }
     #week{
@@ -22,6 +22,11 @@ body {
 
 #tabs {
     display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 #all{
     padding:0 20px;
@@ -56,7 +61,7 @@ body {
 }
 .dayTbl .time {
     font-size:10px;
-    width: 75px;
+    width: 80px;
 }
 .dayTbl .predmet {
     font-size:14px;

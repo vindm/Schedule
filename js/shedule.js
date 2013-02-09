@@ -961,7 +961,8 @@ function Para (time,predmet, type, kab, prepod) {
 
 function check_gr( group, dateText ){
     if ( $("#group").hasClass( group ) ) return;
-    $("#group").removeClass().addClass( group )
+    $("#group").removeClass().addClass( group );
+    $('#adv').hide();
 
     document.title = "Расписание - " + group;
     weeky( dateText || "now" );
@@ -1369,25 +1370,6 @@ function prev_mes_func () {
 
 
 $(function() {
-    /*if($.browser.chrome){$('#gr_mes').height(192), $('#gr_mes_head').height(29), $('#mes_inp').height(86),  $('#nav_mes').css('margin-top', '133px'),$('#gr_mes_cont').livequery(function()
-     {
-     $(this).height(80)
-     })}
-     if($.browser.firefox){$('#gr_mes').height(202),$('#tablid').height(100)}
-     if($.browser.opera){$('#tablid').height(100)}
-     */
-    /*if(loc<100){
-     $("#tabs-2").css({"height": $(document).height()-230})
-     $("#funci").css({"margin-top":(($(document).height()-880)/2)}).draggable()
-     } else{
-     $("#tabs-2").css({"height": $(document).height()-250})
-     $("#funci").css({"margin-top":(($(document).height()-860)/2)}).draggable()
-     };if(loc>100)	{
-     $("#week").css("width", width-40)
-     $("#datepicker").css({"position":"absolute", "bottom":"0px"})
-     }	else{
-     $("#week").css("width", 0.7*width)
-     }*/
 
     $("#star").button({ icons: {primary:'ui-icon-script'} }).click(function(){ $("#uved").dialog("open") });
     $("#info_but").button({ icons: {primary:'ui-icon-help'} }).click(function()	{ $("#info").dialog("open") });
@@ -1499,63 +1481,57 @@ $(function() {
     }).find('label').first().addClass('ui-corner-left').end().last().addClass('ui-corner-right');
 
     $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
-    $("#datepicker").datepicker("setDate", new Date( dateText ));
-
     check_gr('371', dateText);
 
     $("#tabs")
-        .height(height).width(width)
         .tabs({ fx: { opacity: 'toggle' }})
         .slideDown();
 
     var auth_key
     var viewer_id
-/*
+
     VK.init(function() {
-            VK.callMethod('scrollWindow', 68)
-            var parts=document.location.search.substr(1).split("&");
-            var flashVars={}, curr;
-            var viewer_group="no group"
-            for (i=0; i<parts.length; i++)
-            {
-                curr = parts[i].split('=');
-                flashVars[curr[0]] = curr[1];
-            }
-            auth_key = flashVars['auth_key'];
-            viewer_id = flashVars['viewer_id'];
+        VK.callMethod('scrollWindow', 68)
+        var parts=document.location.search.substr(1).split("&");
+        var flashVars={}, curr;
+        var viewer_group="no group"
+        for (i=0; i<parts.length; i++)
+        {
+            curr = parts[i].split('=');
+            flashVars[curr[0]] = curr[1];
+        }
+        auth_key = flashVars['auth_key'];
+        viewer_id = flashVars['viewer_id'];
 
-            VK.api("getGroups", function(data) {
-                for(var i=0; i<=data.response.length;i++) {
-                    switch(data.response[i]) {
-                        case 482775:
-                            sl(0, 371);
-                            setCookie('group', 371);
-                            //load_mes(371);
-                            break;
-                        case 300255:
-                        case 15895805:
-                            setCookie('group', 372);
-                            sl(1, 372);
-                            //load_mes(372);
-                            break;
-                        case 929251:
-                            setCookie('group', 373);
-                            sl(2, 373);
-                            //load_mes(373);
-                            break;
-                        case 292588:
-                            setCookie('group', 3571);
-                            sl(3, 3571);
-                            //load_mes(3571);
-                            break;
-                        default: sl(0, 371)
-                    }
+        VK.api("getGroups", function(data) {
+            for(var i=0; i<=data.response.length;i++) {
+                switch(data.response[i]) {
+                    case 482775:
+                        $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
+                        check_gr('371', dateText);
+                        break;
+                    case 300255:
+                    case 15895805:
+                        $("#gr_tog>label").eq(1).addClass("ui-state-active").attr("aria-pressed", true);
+                        check_gr('372', dateText);
+                        break;
+                    case 929251:
+                        $("#gr_tog>label").eq(2).addClass("ui-state-active").attr("aria-pressed", true);
+                        check_gr('373', dateText);
+                        break;
+                    case 292588:
+                        $("#gr_tog>label").eq(3).addClass("ui-state-active").attr("aria-pressed", true);
+                        check_gr('3571', dateText);
+                        break;
+                    default:
+                        $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
+                        check_gr('371', dateText);
                 }
-                //base(viewer_id, auth_key)
-            })
+            }
+            //base(viewer_id, auth_key)
         })
+    });
 
-*/
     $('#add_mes').bind('click',	mes_btn)
     $('#next_mes').addClass('dis').bind('click', next_mes_func)
     $('#prev_mes').bind('click', prev_mes_func)
