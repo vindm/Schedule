@@ -1496,7 +1496,7 @@ $(function() {
     }
     auth_key = flashVars['auth_key'];
     viewer_id = flashVars['viewer_id'];
-
+console.log(viewer_id)
     if ( !viewer_id ) {
         $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
         check_gr('371', dateText);
