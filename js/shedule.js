@@ -1497,13 +1497,14 @@ $(function() {
     auth_key = flashVars['auth_key'];
     viewer_id = flashVars['viewer_id'];
 
-    if ( !viewer_id ) {
+
+
+    VK.init(function() {
+        if ( !viewer_id ) {
         console.log($("#gr_tog>label").eq(0))
         $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
         check_gr('371', dateText);
     }
-
-    VK.init(function() {
         VK.callMethod('scrollWindow', 68)
         VK.api("getGroups", function(data) {
             console.log('lol')
