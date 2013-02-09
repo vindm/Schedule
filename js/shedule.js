@@ -1501,9 +1501,10 @@ $(function() {
 
     VK.init(function() {
         if ( !viewer_id ) {
-        console.log($("#gr_tog>label").eq(0))
+        console.log($("#gr_tog label").first())
         $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
         check_gr('371', dateText);
+            $('#group').removeClass().addClass('371')
     }
         VK.callMethod('scrollWindow', 68)
         VK.api("getGroups", function(data) {

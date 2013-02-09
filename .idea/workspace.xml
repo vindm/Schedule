@@ -57,9 +57,33 @@
       <file leaf-file-name="shedule.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/shedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1502" column="8" selection-start="63477" selection-end="63477" vertical-scroll-proportion="0.5762712">
+            <state line="1511" column="31" selection-start="63878" selection-end="63878" vertical-scroll-proportion="0.6398305">
               <folding>
-                <element signature="e#63845#65022#0" expanded="false" />
+                <element signature="n#!!block;n#firweek#0" expanded="false" />
+                <element signature="n#!!block;n#secweek#0" expanded="false" />
+                <element signature="n#!!block;n#swool#0" expanded="false" />
+                <element signature="n#!!block;n#getCookie#0" expanded="false" />
+                <element signature="n#!!block;n#setCookie#0" expanded="false" />
+                <element signature="n#!!block;n#mes_btn#0" expanded="false" />
+                <element signature="n#!!block;n#vernemsya#0" expanded="false" />
+                <element signature="n#!!block;n#save_mes#0" expanded="false" />
+                <element signature="n#!!block;n#not_load#0" expanded="false" />
+                <element signature="n#!!block;n#list_mes#0" expanded="false" />
+                <element signature="n#!!block;n#srch#0" expanded="false" />
+                <element signature="n#!!block;n#load_mes#0" expanded="false" />
+                <element signature="n#!!block;n#del_mes#0" expanded="false" />
+                <element signature="n#!!block;n#izm_mes#0" expanded="false" />
+                <element signature="n#!!block;n#vernemsya2#0" expanded="false" />
+                <element signature="n#!!block;n#save_mes2#0" expanded="false" />
+                <element signature="n#!!block;n#rr#0" expanded="false" />
+                <element signature="n#!!block;n#next_mes_func#0" expanded="false" />
+                <element signature="n#!!block;n#prev_mes_func#0" expanded="false" />
+                <element signature="e#59342#59544#0" expanded="false" />
+                <element signature="e#59649#59866#0" expanded="false" />
+                <element signature="e#60001#60285#0" expanded="false" />
+                <element signature="e#60374#60641#0" expanded="false" />
+                <element signature="e#60768#62000#0" expanded="false" />
+                <element signature="e#63901#65078#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -478,9 +502,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/shedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1502" column="8" selection-start="63477" selection-end="63477" vertical-scroll-proportion="0.5762712">
+        <state line="1511" column="31" selection-start="63878" selection-end="63878" vertical-scroll-proportion="0.6398305">
           <folding>
-            <element signature="e#63845#65022#0" expanded="false" />
+            <element signature="n#!!block;n#firweek#0" expanded="false" />
+            <element signature="n#!!block;n#secweek#0" expanded="false" />
+            <element signature="n#!!block;n#swool#0" expanded="false" />
+            <element signature="n#!!block;n#getCookie#0" expanded="false" />
+            <element signature="n#!!block;n#setCookie#0" expanded="false" />
+            <element signature="n#!!block;n#mes_btn#0" expanded="false" />
+            <element signature="n#!!block;n#vernemsya#0" expanded="false" />
+            <element signature="n#!!block;n#save_mes#0" expanded="false" />
+            <element signature="n#!!block;n#not_load#0" expanded="false" />
+            <element signature="n#!!block;n#list_mes#0" expanded="false" />
+            <element signature="n#!!block;n#srch#0" expanded="false" />
+            <element signature="n#!!block;n#load_mes#0" expanded="false" />
+            <element signature="n#!!block;n#del_mes#0" expanded="false" />
+            <element signature="n#!!block;n#izm_mes#0" expanded="false" />
+            <element signature="n#!!block;n#vernemsya2#0" expanded="false" />
+            <element signature="n#!!block;n#save_mes2#0" expanded="false" />
+            <element signature="n#!!block;n#rr#0" expanded="false" />
+            <element signature="n#!!block;n#next_mes_func#0" expanded="false" />
+            <element signature="n#!!block;n#prev_mes_func#0" expanded="false" />
+            <element signature="e#59342#59544#0" expanded="false" />
+            <element signature="e#59649#59866#0" expanded="false" />
+            <element signature="e#60001#60285#0" expanded="false" />
+            <element signature="e#60374#60641#0" expanded="false" />
+            <element signature="e#60768#62000#0" expanded="false" />
+            <element signature="e#63901#65078#0" expanded="false" />
           </folding>
         </state>
       </provider>
