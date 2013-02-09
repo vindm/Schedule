@@ -1500,7 +1500,11 @@ $(function() {
 
 
     VK.init(function() {
-
+if(!viewer_id){
+    $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
+    check_gr(groups[0], dateText);
+    console.log('no gr', groups[0])
+}
 
         VK.callMethod('scrollWindow', 68)
         VK.api("getGroups", function(data) {
