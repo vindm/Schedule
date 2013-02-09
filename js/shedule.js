@@ -959,42 +959,7 @@ function Para (time,predmet, type, kab, prepod) {
 }
 
 
-function check_gr( group, dateText ){
-    if ( $("#group").hasClass( group ) ) return;
-    $("#group").removeClass().addClass( group );
-    $('#adv').hide();
 
-    document.title = "Расписание - " + group;
-    weeky( dateText || "now" );
-    $("#datepicker").datepicker("setDate", dateText? new Date(dateText): new Date() );
-}
-function weeky(what){
-    what = what == 'now'? new Date(): new Date(what);
-    var dt = new Date(),
-        d = what.getDay(),
-        weeks = $("#week_tog>label"),
-        gr = $("#gr_tog>label.ui-state-active>span").text(),
-        firstWeek = false;
-
-    for(var i=0; i<one.length; i=i+2) {
-        if(what>=new Date(one[i]) && what<new Date(one[i+1])) {
-            firstWeek = true;
-        }
-    }
-
-    if ( d > 0 && dt.getHours() < 17 ) d--;
-    if ( d > 5 ) {
-        d = 0;
-        firstWeek=!firstWeek;
-    }
-
-    weeks.eq(firstWeek? 0: 1).addClass("ui-state-active").attr("aria-pressed", true);
-    weeks.eq(firstWeek? 1: 0).removeClass("ui-state-active").attr("aria-pressed", false);
-    firstWeek? firweek( what, gr ): secweek( what, gr );
-
-    $('#week').accordion("activate", d);
-
-}
 function firweek (curr,gr){
     switch(gr)
     {
@@ -1369,6 +1334,43 @@ function prev_mes_func () {
 }
 
 
+var curD = false;
+function check_gr( group, dateText ){
+    if ( $("#group").hasClass( group ) ) return;
+    $("#group").removeClass().addClass( group );
+    $('#adv').hide();
+
+    document.title = "Расписание - " + group;
+    weeky( dateText || "now" );
+}
+function weeky(what, notCheckTime){
+    what = what == 'now'? new Date(): new Date(what);
+    var dt = new Date(),
+        d = what.getDay(),
+        day = what.getDate(),
+        weeks = $("#week_tog>label"),
+        gr = $("#gr_tog>label.ui-state-active>span").text(),
+        firstWeek = false;
+
+    if ( !notCheckTime && dt.getHours() > 17 ) { d++; day++; }
+
+    if ( d > 6 ) { d = 1; day++;    }
+    what.setDate(day);
+
+    for(var i=0; i<one.length; i=i+2) {
+        if(what>=new Date(one[i]) && what<new Date(one[i+1])) {
+            firstWeek = true;
+        }
+    }
+
+    weeks.eq(firstWeek? 0: 1).addClass("ui-state-active").attr("aria-pressed", true);
+    weeks.eq(firstWeek? 1: 0).removeClass("ui-state-active").attr("aria-pressed", false);
+    firstWeek? firweek( what, gr ): secweek( what, gr );
+    $("#datepicker").datepicker("setDate", what );
+    $('#week').accordion("activate", d-1);
+
+
+}
 $(function() {
 
     $("#star").button({ icons: {primary:'ui-icon-script'} }).click(function(){ $("#uved").dialog("open") });
@@ -1388,8 +1390,7 @@ $(function() {
     $("#datepicker").datepicker({
         minDate:new Date("02/01/2010"),maxDate:new Date("05/29/2011"), dateFormat: 'mm/dd/yy',
         onSelect:function(dateText) {
-            if($(".no").length==0)
-                weeky(dateText)
+            weeky(dateText, true);
         }
     });
     $("#datepicker .ui-datepicker-week-end:odd:not(:first, .ui-datepicker-other-month, .ui-datepicker-today)").livequery(function() {
@@ -1411,7 +1412,7 @@ $(function() {
         }
     })
 
-    $('#week').accordion({autoHeight: false, active:false, animated: 'bounceslide'});
+    $('#week').accordion({autoHeight: false, active:false });
 
     $("td.prep").livequery(function(){
         switch($(this).children("p").text())
@@ -1455,9 +1456,10 @@ $(function() {
 
     var dt = new Date(),
         today = dt.getDay(),
-        day = today==7? 30: 22+today,
+        day = today==7? 30: 15+today*((today-today%7+1)%2),
         dateText = "05/"+day+"/2011",
         dat = new Date( dateText );
+
 
     $("#radio1").addClass('ui-corner-left').click(function(){
         firweek(dat,$("#gr_tog>label.ui-state-active>span").text())
@@ -1479,8 +1481,6 @@ $(function() {
             }
         });
     }).find('label').first().addClass('ui-corner-left').end().last().addClass('ui-corner-right');
-
-
 
 
 

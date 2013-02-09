@@ -23,7 +23,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="19" selection-start="160" selection-end="160" vertical-scroll-proportion="-2.5">
+            <state line="164" column="87" selection-start="10700" selection-end="10700" vertical-scroll-proportion="-19.041666">
               <folding>
                 <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -57,7 +57,7 @@
       <file leaf-file-name="shedule.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/shedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1506" column="1" selection-start="63642" selection-end="63642" vertical-scroll-proportion="0.3220339">
+            <state line="1414" column="57" selection-start="60709" selection-end="60709" vertical-scroll-proportion="0.78531075">
               <folding>
                 <element signature="n#!!block;n#firweek#0" expanded="false" />
                 <element signature="n#!!block;n#secweek#0" expanded="false" />
@@ -78,11 +78,10 @@
                 <element signature="n#!!block;n#rr#0" expanded="false" />
                 <element signature="n#!!block;n#next_mes_func#0" expanded="false" />
                 <element signature="n#!!block;n#prev_mes_func#0" expanded="false" />
-                <element signature="e#59342#59544#0" expanded="false" />
-                <element signature="e#59649#59866#0" expanded="false" />
-                <element signature="e#60001#60285#0" expanded="false" />
-                <element signature="e#60374#60641#0" expanded="false" />
-                <element signature="e#60768#62000#0" expanded="false" />
+                <element signature="e#59382#59584#0" expanded="false" />
+                <element signature="e#60009#60293#0" expanded="false" />
+                <element signature="e#60382#60649#0" expanded="false" />
+                <element signature="e#60752#61984#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -293,7 +292,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33489618" sideWeight="0.6706667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33489618" sideWeight="0.6706667" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -469,7 +468,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="160" selection-end="160" vertical-scroll-proportion="-2.5">
+        <state line="164" column="87" selection-start="10700" selection-end="10700" vertical-scroll-proportion="-19.041666">
           <folding>
             <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -501,7 +500,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/shedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1506" column="1" selection-start="63642" selection-end="63642" vertical-scroll-proportion="0.3220339">
+        <state line="1414" column="57" selection-start="60709" selection-end="60709" vertical-scroll-proportion="0.78531075">
           <folding>
             <element signature="n#!!block;n#firweek#0" expanded="false" />
             <element signature="n#!!block;n#secweek#0" expanded="false" />
@@ -522,11 +521,10 @@
             <element signature="n#!!block;n#rr#0" expanded="false" />
             <element signature="n#!!block;n#next_mes_func#0" expanded="false" />
             <element signature="n#!!block;n#prev_mes_func#0" expanded="false" />
-            <element signature="e#59342#59544#0" expanded="false" />
-            <element signature="e#59649#59866#0" expanded="false" />
-            <element signature="e#60001#60285#0" expanded="false" />
-            <element signature="e#60374#60641#0" expanded="false" />
-            <element signature="e#60768#62000#0" expanded="false" />
+            <element signature="e#59382#59584#0" expanded="false" />
+            <element signature="e#60009#60293#0" expanded="false" />
+            <element signature="e#60382#60649#0" expanded="false" />
+            <element signature="e#60752#61984#0" expanded="false" />
           </folding>
         </state>
       </provider>
