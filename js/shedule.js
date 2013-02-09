@@ -1508,10 +1508,9 @@ if(!viewer_id){
 
         VK.callMethod('scrollWindow', 68)
         VK.api("getGroups", function(data) {
-            $("#gr_tog label").removeClass('ui-state-active').attr("aria-pressed", false);
-            var gr = 0;
-            for(var i=0; i<=data.response.length;i++) {
-                switch(data.response[i]) {
+            var gr = false;
+            $.each(data.response, function(i,d){
+                switch(d) {
                     case 482775:
                         gr=0; break;
                     case 300255:
@@ -1521,11 +1520,11 @@ if(!viewer_id){
                         gr=2; break;
                     case 292588:
                         gr=3; break;
-                    default:
-                        gr=0
                 }
-            }
-            $("#gr_tog>label").eq(gr).addClass("ui-state-active").attr("aria-pressed", true);
+            });
+            $("#gr_tog label")
+                .removeClass('ui-state-active').attr("aria-pressed", false)
+                .eq(gr).addClass("ui-state-active").attr("aria-pressed", true);
             check_gr(groups[gr], dateText);
             console.log(groups[gr])
 
