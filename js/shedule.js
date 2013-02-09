@@ -1502,8 +1502,8 @@ $(function() {
         }
         auth_key = flashVars['auth_key'];
         viewer_id = flashVars['viewer_id'];
-        VK.api("getGroups", function(data,err) {
-            console.log(data,err)
+        console.log(VK.api)
+        VK.api("getGroups", function(data) {
             for(var i=0; i<=data.response.length;i++) {
                 switch(data.response[i]) {
                     case 482775:
