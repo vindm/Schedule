@@ -20,10 +20,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="19" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0877193">
+            <state line="4" column="19" selection-start="160" selection-end="160" vertical-scroll-proportion="27.125">
               <folding>
                 <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -54,37 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shedule.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="shedule.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/shedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1510" column="50" selection-start="64077" selection-end="64077" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!block;n#base#0" expanded="false" />
-                <element signature="n#!!block;n#statis#0" expanded="false" />
-                <element signature="n#!!block;n#firweek#0" expanded="false" />
-                <element signature="n#!!block;n#secweek#0" expanded="false" />
-                <element signature="n#!!block;n#getCookie#0" expanded="false" />
-                <element signature="n#!!block;n#setCookie#0" expanded="false" />
-                <element signature="n#!!block;n#mes_btn#0" expanded="false" />
-                <element signature="n#!!block;n#vernemsya#0" expanded="false" />
-                <element signature="n#!!block;n#save_mes#0" expanded="false" />
-                <element signature="n#!!block;n#not_load#0" expanded="false" />
-                <element signature="n#!!block;n#list_mes#0" expanded="false" />
-                <element signature="n#!!block;n#srch#0" expanded="false" />
-                <element signature="n#!!block;n#load_mes#0" expanded="false" />
-                <element signature="n#!!block;n#del_mes#0" expanded="false" />
-                <element signature="n#!!block;n#izm_mes#0" expanded="false" />
-                <element signature="n#!!block;n#vernemsya2#0" expanded="false" />
-                <element signature="n#!!block;n#save_mes2#0" expanded="false" />
-                <element signature="n#!!block;n#rr#0" expanded="false" />
-                <element signature="n#!!block;n#next_mes_func#0" expanded="false" />
-                <element signature="n#!!block;n#prev_mes_func#0" expanded="false" />
-                <element signature="e#59649#59866#0" expanded="false" />
-                <element signature="e#60001#60285#0" expanded="false" />
-                <element signature="e#60374#60641#0" expanded="false" />
-                <element signature="e#62343#62470#0" expanded="false" />
-                <element signature="e#62506#62634#0" expanded="false" />
-              </folding>
+            <state line="1530" column="25" selection-start="64969" selection-end="64969" vertical-scroll-proportion="0.7881356">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,11 +67,7 @@
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="63" column="13" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1313#1369#0" expanded="false" />
-                <element signature="e#1378#1415#0" expanded="false" />
-                <element signature="e#1424#1465#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,7 +84,7 @@
       <file leaf-file-name="jquery-ui-1.8.4.custom.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/black-tie/jquery-ui-1.8.4.custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="341" column="227" selection-start="22279" selection-end="22279" vertical-scroll-proportion="-11.285714">
+            <state line="341" column="227" selection-start="22279" selection-end="22279" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -134,11 +104,12 @@
         <option value="$PROJECT_DIR$/css/blog.css" />
         <option value="$PROJECT_DIR$/css/black-tie/jquery-ui-1.8.4.custom.css" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/js/shedule.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/shedule.js" />
       </list>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="56" />
     <option name="y" value="-4" />
@@ -244,8 +215,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="preferences.sourceCode.LESS" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -272,7 +243,7 @@
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -294,10 +265,10 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32953784" sideWeight="0.6706667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33489618" sideWeight="0.6706667" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -452,7 +423,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/black-tie/jquery-ui-1.8.4.custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="341" column="227" selection-start="22279" selection-end="22279" vertical-scroll-proportion="-11.285714">
+        <state line="341" column="227" selection-start="22279" selection-end="22279" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -467,50 +438,13 @@
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="13" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1313#1369#0" expanded="false" />
-            <element signature="e#1378#1415#0" expanded="false" />
-            <element signature="e#1424#1465#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/shedule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1510" column="50" selection-start="64077" selection-end="64077" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!block;n#base#0" expanded="false" />
-            <element signature="n#!!block;n#statis#0" expanded="false" />
-            <element signature="n#!!block;n#firweek#0" expanded="false" />
-            <element signature="n#!!block;n#secweek#0" expanded="false" />
-            <element signature="n#!!block;n#getCookie#0" expanded="false" />
-            <element signature="n#!!block;n#setCookie#0" expanded="false" />
-            <element signature="n#!!block;n#mes_btn#0" expanded="false" />
-            <element signature="n#!!block;n#vernemsya#0" expanded="false" />
-            <element signature="n#!!block;n#save_mes#0" expanded="false" />
-            <element signature="n#!!block;n#not_load#0" expanded="false" />
-            <element signature="n#!!block;n#list_mes#0" expanded="false" />
-            <element signature="n#!!block;n#srch#0" expanded="false" />
-            <element signature="n#!!block;n#load_mes#0" expanded="false" />
-            <element signature="n#!!block;n#del_mes#0" expanded="false" />
-            <element signature="n#!!block;n#izm_mes#0" expanded="false" />
-            <element signature="n#!!block;n#vernemsya2#0" expanded="false" />
-            <element signature="n#!!block;n#save_mes2#0" expanded="false" />
-            <element signature="n#!!block;n#rr#0" expanded="false" />
-            <element signature="n#!!block;n#next_mes_func#0" expanded="false" />
-            <element signature="n#!!block;n#prev_mes_func#0" expanded="false" />
-            <element signature="e#59649#59866#0" expanded="false" />
-            <element signature="e#60001#60285#0" expanded="false" />
-            <element signature="e#60374#60641#0" expanded="false" />
-            <element signature="e#62343#62470#0" expanded="false" />
-            <element signature="e#62506#62634#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0877193">
+        <state line="4" column="19" selection-start="160" selection-end="160" vertical-scroll-proportion="27.125">
           <folding>
             <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -537,6 +471,13 @@
             <element signature="n#style#0;n#span#2;n#div#1;n#div#11;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#4;n#div#1;n#div#11;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/shedule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1530" column="25" selection-start="64969" selection-end="64969" vertical-scroll-proportion="0.7881356">
+          <folding />
         </state>
       </provider>
     </entry>

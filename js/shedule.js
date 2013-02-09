@@ -1480,12 +1480,8 @@ $(function() {
         });
     }).find('label').first().addClass('ui-corner-left').end().last().addClass('ui-corner-right');
 
-    $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
-    check_gr('371', dateText);
 
-    $("#tabs")
-        .tabs({ fx: { opacity: 'toggle' }})
-        .slideDown();
+
 
     var auth_key
     var viewer_id
@@ -1530,6 +1526,9 @@ $(function() {
             }
             //base(viewer_id, auth_key)
         })
+        $("#tabs")
+            .tabs({ fx: { opacity: 'toggle' }})
+            .slideDown();
     });
 
     $('#add_mes').bind('click',	mes_btn)
