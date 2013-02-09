@@ -1500,19 +1500,19 @@ $(function() {
 
 
     VK.init(function() {
+        $("#gr_tog label.ui-state-active").removeClass('ui-state-active');
         if ( !viewer_id ) {
-        console.log($("#gr_tog label").first())
-        $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
-        check_gr('371', dateText);
+            $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
             $('#group').removeClass().addClass('371')
-    }
+            check_gr('371', dateText);
+        }
         VK.callMethod('scrollWindow', 68)
         VK.api("getGroups", function(data) {
             console.log('lol')
             for(var i=0; i<=data.response.length;i++) {
                 switch(data.response[i]) {
                     case 482775:
-                        $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
+                        $("#gr_tog>label").eq(0).removeClass().addClass("ui-state-active").attr("aria-pressed", true);
                         check_gr('371', dateText);
                         break;
                     case 300255:
