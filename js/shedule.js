@@ -1480,29 +1480,29 @@ $(function() {
         });
     }).find('label').first().addClass('ui-corner-left').end().last().addClass('ui-corner-right');
 
-    $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
-    check_gr('371', dateText);
 
-    $("#tabs")
-        .tabs({ fx: { opacity: 'toggle' }})
-        .slideDown();
+
+
 
     var auth_key
     var viewer_id
+    var parts=document.location.search.substr(1).split("&");
+    var flashVars={}, curr;
+    var viewer_group="no group"
+    for (i=0; i<parts.length; i++)
+    {
+        curr = parts[i].split('=');
+        flashVars[curr[0]] = curr[1];
+    }
+    auth_key = flashVars['auth_key'];
+    viewer_id = flashVars['viewer_id'];
 
+    if ( !viewer_id ) {
+        $("#gr_tog>label").eq(0).addClass("ui-state-active").attr("aria-pressed", true);
+        check_gr('371', dateText);
+    }
     VK.init(function() {
         VK.callMethod('scrollWindow', 68)
-        var parts=document.location.search.substr(1).split("&");
-        var flashVars={}, curr;
-        var viewer_group="no group"
-        for (i=0; i<parts.length; i++)
-        {
-            curr = parts[i].split('=');
-            flashVars[curr[0]] = curr[1];
-        }
-        auth_key = flashVars['auth_key'];
-        viewer_id = flashVars['viewer_id'];
-        console.log(parts)
         VK.api("getGroups", function(data) {
             console.log('lol')
             for(var i=0; i<=data.response.length;i++) {
@@ -1532,7 +1532,9 @@ $(function() {
             //base(viewer_id, auth_key)
         })
     });
-
+    $("#tabs")
+        .tabs({ fx: { opacity: 'toggle' }})
+        .slideDown();
     $('#add_mes').bind('click',	mes_btn)
     $('#next_mes').addClass('dis').bind('click', next_mes_func)
     $('#prev_mes').bind('click', prev_mes_func)
