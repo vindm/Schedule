@@ -1352,11 +1352,6 @@ function weeky(what, notCheckTime){
         gr = $("#gr_tog>label.ui-state-active>span").text(),
         firstWeek = false;
 
-    if ( !notCheckTime && dt.getHours() > 17 ) { d++; day++; }
-
-    if ( d > 6 ) { d = 1; day++;    }
-    what.setDate(day);
-
     for(var i=0; i<one.length; i=i+2) {
         if(what>=new Date(one[i]) && what<new Date(one[i+1])) {
             firstWeek = true;
@@ -1456,18 +1451,22 @@ $(function() {
 
     var dt = new Date(),
         today = dt.getDay(),
-        day = today==7? 30: 15+today*((today-today%7+1)%2),
-        dateText = "05/"+day+"/2011",
+        day = 1+today*((today-today%7+1)%2);
+
+
+    if ( dt.getHours() > 17 ) { day++; today++}
+    if ( today > 6 ) { day++; }
+    var dateText = "05/"+day+"/2011",
         dat = new Date( dateText );
 
 
-    $("#radio1").addClass('ui-corner-left').click(function(){
+    console.log(today*((today-today%7+1)%2))
+    $("#radio1").addClass('ui-corner-left').click(function() {
+        
         firweek(dat,$("#gr_tog>label.ui-state-active>span").text())
-        $("#datepicker").datepicker("setDate", dat)
     });
     $("#radio2").click(function(){
         secweek(dat, $("#gr_tog>label.ui-state-active>span").text())
-        $("#datepicker").datepicker("setDate", dat)
     });
 
     var groups = ['371', '372', '373', '3571'];
