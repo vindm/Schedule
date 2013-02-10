@@ -1455,6 +1455,7 @@ $(function() {
 
 
     if ( dt.getHours() > 17 ) { day++; today++}
+    console.log( today )
     if ( today > 6 || today == 0 ) { day++; }
     var dateText = "05/"+day+"/2011",
         dat = new Date( dateText );

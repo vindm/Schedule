@@ -32,7 +32,7 @@
       <file leaf-file-name="shedule.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/shedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1457" column="32" selection-start="62155" selection-end="62155" vertical-scroll-proportion="0.44491526">
+            <state line="1457" column="24" selection-start="62147" selection-end="62147" vertical-scroll-proportion="0.44491526">
               <folding>
                 <element signature="n#!!block;n#firweek#0" expanded="false" />
                 <element signature="n#!!block;n#secweek#0" expanded="false" />
@@ -324,7 +324,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/blog.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="0" selection-end="5158" vertical-scroll-proportion="0.0" />
+        <state line="16" column="33" selection-start="0" selection-end="5158" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#688#929#0" expanded="false" />
+            <element signature="e#942#1234#0" expanded="false" />
+            <element signature="e#1249#1294#0" expanded="false" />
+            <element signature="e#1307#1381#0" expanded="false" />
+            <element signature="e#1391#1409#0" expanded="false" />
+            <element signature="e#1419#1497#0" expanded="false" />
+            <element signature="e#1507#1587#0" expanded="false" />
+            <element signature="e#1597#1616#0" expanded="false" />
+            <element signature="e#1625#1645#0" expanded="false" />
+            <element signature="e#1674#1932#0" expanded="false" />
+            <element signature="e#1941#1964#0" expanded="false" />
+            <element signature="e#2011#2156#0" expanded="false" />
+            <element signature="e#2170#2187#0" expanded="false" />
+            <element signature="e#2200#2341#0" expanded="false" />
+            <element signature="e#2350#2542#0" expanded="false" />
+            <element signature="e#2548#2628#0" expanded="false" />
+            <element signature="e#2637#2729#0" expanded="false" />
+            <element signature="e#2759#2796#0" expanded="false" />
+            <element signature="e#2807#2831#0" expanded="false" />
+            <element signature="e#2840#2908#0" expanded="false" />
+            <element signature="e#2920#2993#0" expanded="false" />
+            <element signature="e#3009#3073#0" expanded="false" />
+            <element signature="e#3081#3283#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/black-tie/jquery-ui-1.8.4.custom.css">
@@ -357,7 +383,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/shedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1457" column="32" selection-start="62155" selection-end="62155" vertical-scroll-proportion="0.44491526">
+        <state line="1457" column="24" selection-start="62147" selection-end="62147" vertical-scroll-proportion="0.44491526">
           <folding>
             <element signature="n#!!block;n#firweek#0" expanded="false" />
             <element signature="n#!!block;n#secweek#0" expanded="false" />
