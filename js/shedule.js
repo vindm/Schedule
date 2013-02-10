@@ -1455,14 +1455,14 @@ $(function() {
 
 
     if ( dt.getHours() > 17 ) { day++; today++}
-    if ( today > 6 ) { day++; }
+    if ( today > 6 || today == 0 ) { day++; }
     var dateText = "05/"+day+"/2011",
         dat = new Date( dateText );
 
 
     console.log(today*((today-today%7+1)%2))
     $("#radio1").addClass('ui-corner-left').click(function() {
-        
+
         firweek(dat,$("#gr_tog>label.ui-state-active>span").text())
     });
     $("#radio2").click(function(){
